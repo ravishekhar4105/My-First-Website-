@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Indian Flag - RAVI</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(#5dbbff, #ffffff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .scene {
+      position: relative;
+      width: 500px;
+      height: 420px;
+    }
+
+    /* Pole */
+    .pole {
+      position: absolute;
+      left: 120px;
+      top: 40px;
+      width: 8px;
+      height: 280px;
+      background: linear-gradient(#ccc, #888);
+      border-radius: 4px;
+    }
+
+    /* Flag */
+    .flag {
+      position: absolute;
+      left: 128px;
+      top: 40px;
+      width: 200px;
+      height: 120px;
+      animation: wave 3s infinite ease-in-out;
+      transform-origin: left;
+    }
+
+    .flag div {
+      width: 100%;
+      height: 40px;
+    }
+
+    .saffron {
+      background: #ff9933;
+    }
+
+    .white {
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .green {
+      background: #138808;
+    }
+
+    /* Ashok Chakra */
+    .chakra {
+      width: 30px;
+      height: 30px;
+      border: 2px solid navy;
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .chakra::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      background: navy;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+    }
+
+    /* Rock */
+    .rock {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(#8b8b8b, #5a5a5a);
+      border-radius: 60px 60px 0 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: inset 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    .rock h1 {
+      color: white;
+      font-size: 52px;
+      letter-spacing: 8px;
+      text-shadow: 2px 2px 6px black;
+    }
+
+    /* Animation */
+    @keyframes wave {
+      0%   { transform: skewY(0deg); }
+      50%  { transform: skewY(-5deg); }
+      100% { transform: skewY(0deg); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="scene">
+    <div class="pole"></div>
+
+    <div class="flag">
+      <div class="saffron"></div>
+      <div class="white">
+        <div class="chakra"></div>
+      </div>
+      <div class="green"></div>
+    </div>
+
+    <div class="rock">
+      <h1 id="nameText">RAVI</h1>
+    </div>
+  </div>
+
+  <script>
+    // JS – text change example
+    const nameText = document.getElementById("nameText");
+
+    // Change name dynamically if needed
+    // nameText.innerText = "INDIA";
+
+    console.log("🇮🇳 Indian Flag Scene Loaded");
+  </script>
+
+</body>
+</html>
